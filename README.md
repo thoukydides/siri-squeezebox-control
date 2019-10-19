@@ -59,7 +59,7 @@ The behaviour of this script is affected by various Logitech Media Server settin
 
 ## Reporting Problems
 
-If something doesn't work as expected then please try to reproduce the issue by running the script directly within the Scriptable app. If it still fails then please include the contents of the **Log** window in any report. This includes cases where the script does not understand a command that has been phased in a natural way.
+If something doesn't work as expected then please try to reproduce the issue by running the script directly within the Scriptable app. If it still fails then please include the contents of the **Log** window in any report. This includes cases where the script does not understand a command that has been phrased in a natural way.
 
 ## License
 
