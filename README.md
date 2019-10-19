@@ -47,7 +47,7 @@ Interaction with Siri can be made more organic by creating additional Shortcuts 
 * :stop_button: [Squeezebox Stop](https://www.icloud.com/shortcuts/4c529ad29eab4d1d90f7fcd4fec66f07)
 * :next_track_button: [Squeezebox Next](https://www.icloud.com/shortcuts/763f97dc6c994877b5d56390de5f9e02)
 
-‡ Use of these shortcuts also requires the *Squeezebox Play* shortcut to be installed also.
+‡ Use of these shortcuts also requires the *Squeezebox Play* shortcut to be installed.
 
 ## Notes
 
