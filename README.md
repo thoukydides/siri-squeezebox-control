@@ -1,0 +1,68 @@
+# Squeezebox Control
+
+This is a script for Simon Støvring's [Scriptable](https://scriptable.app/) app that provides voice control of Squeezebox players connected to a [Logitech Media Server](http://downloads-origin.slimdevices.com/). It can be used from Siri on an iPhone or iPad. It can also be used from a HomePod, with the script running on a connected iPhone.
+
+## Minimum Requirements
+
+The following are required:
+* Logitech Media Server, version 7.6 or later.
+* iPhone or iPad, running iOS/iPadOS version 13.1 or later.
+* Scriptable app, version 1.4 or later.
+
+## Installation
+
+1. Install the `Squeezebox Control.js` script in Scriptable:
+   1. Launch Scriptable and click on the plus symbol in the top-right to create a new script.
+   1. Download the `Squeezebox Control.js` file from this repository and paste it into the blank Scriptable script.
+   1. Near the start of the script modify the `lmsHostname` (and if necessary `lmsPort`) constants appropriately for the Logitech Media Server's web server. If the server's **Security** is set to **Password Protection** then also change `lmsUsername` and `lmsPassword` to the required credentials.
+   1. Click on the settings icon in the bottom-left, change the **Name** to `Squeezebox Control`, and then Close the window.
+1. Install the [Squeezebox Control](https://www.icloud.com/shortcuts/4b66dc7c872747d48228d204e58c8021) Shortcut.
+
+### Usage
+
+Assuming that both the Shortcut and Scriptable script have been correctly installed, then invoke them by saying **Hey Siri, Squeezebox Control**. Siri should then prompt for the action to perform.
+
+The script should be able to handle most natural ways of phrasing commands, but here are some examples:
+
+| Activity | Example Commands |
+| --- | --- |
+| Turn a player on or off <br> :battery: | Turn *Kitchen* on <br> Switch on the *Lounge* squeezebox <br> Power off *Bedroom* |
+| Ask about the current track <br> :speech_balloon: | What is playing in the *Office*? <br> What's the *Kitchen* player doing? <br> What am I listening to? <br> What's currently playing? |
+| Change the volume <br> :sound: / :loud_sound: | Set *Lounge* volume to *50%* <br> Change the volume to *70* in the *Kitchen* <br> Louder <br> Reduce volume of *Office* |
+| Start or stop the current playlist <br> :arrow_forward: / :stop_button: / :pause_button: | Play <br> Stop playing in the *Bedroom* <br> *Kitchen* pause |
+| Skip tracks in the playlist <br> :previous_track_button: / :next_track_button:  | Skip to previous song <br> Next <br> Restart on *Lounge* squeezebox <br> Play this track from the beginning |
+| Load a new playlist <br> :radio: / :studio_microphone: / :woman_singer: / :cd: / :musical_note: | *Lounge* play playlist *Party Mix* <br> Play genre *Country* <br> Artist *Queen* on *Bedroom* player <br> On the *Lounge* squeezebox play songs by *Johnny Cash* <br> *Kitchen* play album *Money For Nothing* by *Dire Straits* <br> Song *Seven Nation Army* <br> Play *Kylie Minogue* on Bedroom |
+
+All commands apply to either a single Squeezebox player or a sync group. If the name of the player is omitted then the script attempts to make a sensible choice based on which players are switched on and whether they are currently playing anything. Only the power on/off commands require the player to be explicitly identified.
+
+### Additional Shortcuts
+
+Interaction with Siri can be made more organic by creating additional Shortcuts for common interactions. These can have some or all of the command hard-coded, e.g.:
+* :arrow_forward: Squeezebox Play
+* :arrow_forward: Squeezebox Play Playlist ‡
+* :arrow_forward: Squeezebox Play Genre ‡
+* :arrow_forward: Squeezebox Play Artist ‡
+* :arrow_forward: Squeezebox Play Album ‡
+* :arrow_forward: Squeezebox Play Song ‡
+* :stop_button: Squeezebox Stop
+* :next_track_button: Squeezebox Next
+
+‡ These shortcuts also require installation of the *Squeezebox Play* shortcut.
+
+## Notes
+
+This script is intended to be invoked from Siri via the Shortcuts app, with the command to perform (e.g. obtained via an *Ask* action) passed as input. However, it can also be run directly from within the Scriptable app, in which case dictation is used to obtain the command. 
+
+The behaviour of this script is affected by various Logitech Media Server settings, especially the **Search Within Words** option.
+
+## Reporting Problems
+
+If something doesn't work as expected then please try to reproduce the issue by running the script directly within the Scriptable app. If it still fails then please include the contents of the **Log** window in any report. This includes cases where the script does not understand a command that has been phased in a natural way.
+
+## License
+
+> ISC License (ISC)<br>Copyright © 2019 Alexander Thoukydides
+>
+> Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
+>
+> THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
