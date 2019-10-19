@@ -1,6 +1,6 @@
 # Squeezebox Control
 
-This is a script for Simon Støvring's [Scriptable](https://scriptable.app/) app that provides voice control of Squeezebox players connected to a [Logitech Media Server](http://downloads-origin.slimdevices.com/). It can be used from Siri on an iPhone or iPad. It can also be used from a HomePod, with the script running on a connected iPhone.
+This is a script for Simon Støvring's [Scriptable](https://scriptable.app/) app that provides voice control of Squeezebox players connected to a [Logitech Media Server](http://downloads-origin.slimdevices.com/). It can be used from Siri on an iPhone, iPad, or HomePod.
 
 ## Minimum Requirements
 
@@ -51,7 +51,9 @@ Interaction with Siri can be made more organic by creating additional Shortcuts 
 
 ## Notes
 
-This script is intended to be invoked from Siri via the Shortcuts app, with the command to perform (e.g. obtained via an *Ask* action) passed as input. However, it can also be run directly from within the Scriptable app, in which case dictation is used to obtain the command. 
+This script is intended to be invoked from Siri via the Shortcuts app, with the command to perform (e.g. obtained via an *Ask* action) passed as input. However, it can also be run directly from within the Scriptable app, in which case dictation is used to obtain the command.
+
+If the shortcut is invoked on a HomePod then both the Shortcuts and Scriptable apps actually run on the associated iPhone.  Unfortunately it is not currently possible to determine which HomePod is being used, or even that the voice interaction is occurring on a HomePod, so it is not possible to automatically select that player.
 
 The behaviour of this script is affected by various Logitech Media Server settings, especially the **Search Within Words** option.
 
@@ -60,7 +62,7 @@ The behaviour of this script is affected by various Logitech Media Server settin
 If something doesn't work as expected then please try to reproduce the issue by running the script directly within the Scriptable app. If it still fails then please include the contents of the **Log** window in any report. This includes cases where the script does not understand a command that has been phased in a natural way.
 
 ## License
-
+p 
 > ISC License (ISC)<br>Copyright © 2019 Alexander Thoukydides
 >
 > Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
