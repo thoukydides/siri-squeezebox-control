@@ -38,14 +38,14 @@ All commands apply to either a single Squeezebox player or a sync group. If the 
 ### Additional Shortcuts
 
 Interaction with Siri can be made more organic by creating additional Shortcuts for common interactions. These can have some or all of the command hard-coded, e.g.:
-* :arrow_forward: Squeezebox Play
-* :arrow_forward: Squeezebox Play Playlist ‡
-* :arrow_forward: Squeezebox Play Genre ‡
-* :arrow_forward: Squeezebox Play Artist ‡
-* :arrow_forward: Squeezebox Play Album ‡
-* :arrow_forward: Squeezebox Play Song ‡
-* :stop_button: Squeezebox Stop
-* :next_track_button: Squeezebox Next
+* :arrow_forward: [Squeezebox Play](https://www.icloud.com/shortcuts/37e5c92bc6d5473892b774251ed2bc8c)
+* :arrow_forward: [Squeezebox Play Playlist](https://www.icloud.com/shortcuts/78415ce7a5414c9e8a3f3647e9fc5aae) ‡
+* :arrow_forward: [Squeezebox Play Genre](https://www.icloud.com/shortcuts/329e56610acb4e109be77d0c3fe2c927) ‡
+* :arrow_forward: [Squeezebox Play Artist](https://www.icloud.com/shortcuts/9db0a81765104c2ba6f43e3d706a3d74) ‡
+* :arrow_forward: [Squeezebox Play Album](https://www.icloud.com/shortcuts/24676022db5d425aab8c6c645f0f508d) ‡
+* :arrow_forward: [Squeezebox Play Song](https://www.icloud.com/shortcuts/a17d7f791e95475a92dffb1fd0a411ea) ‡
+* :stop_button: [Squeezebox Stop](https://www.icloud.com/shortcuts/4c529ad29eab4d1d90f7fcd4fec66f07)
+* :next_track_button: [Squeezebox Next](https://www.icloud.com/shortcuts/763f97dc6c994877b5d56390de5f9e02)
 
 ‡ These shortcuts also require installation of the *Squeezebox Play* shortcut.
 
