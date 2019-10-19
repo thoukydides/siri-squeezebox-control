@@ -11,7 +11,7 @@ The following are required:
 
 ## Installation
 
-1. Install the `Squeezebox Control.js` script in Scriptable:
+1. Install the script in Scriptable:
    1. Launch Scriptable and click on the plus symbol in the top-right to create a new script.
    1. Download the [`Squeezebox Control.js`](https://raw.githubusercontent.com/thoukydides/siri-squeezebox-control/master/Squeezebox%20Control.js) file from this repository and paste it into the blank Scriptable script.
    1. Near the start of the script modify the `lmsHostname` (and if necessary `lmsPort`) constants appropriately for the Logitech Media Server's web server. If the server's **Security** is set to **Password Protection** then also change `lmsUsername` and `lmsPassword` to the required credentials.
