@@ -62,7 +62,7 @@ The behaviour of this script is affected by various Logitech Media Server settin
 If something doesn't work as expected then please try to reproduce the issue by running the script directly within the Scriptable app. If it still fails then please include the contents of the **Log** window in any report. This includes cases where the script does not understand a command that has been phased in a natural way.
 
 ## License
-p 
+
 > ISC License (ISC)<br>Copyright © 2019 Alexander Thoukydides
 >
 > Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
