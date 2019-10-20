@@ -30,7 +30,7 @@ The script should be able to handle most natural ways of phrasing commands, but 
 | Ask about the current track <br> :speech_balloon: | What is playing in the *Office*? <br> What's the *Kitchen* player doing? <br> What am I listening to? <br> What's currently playing? |
 | Change the volume <br> :sound: / :loud_sound: | Set *Lounge* volume to *50%* <br> Change the volume to *70* in the *Kitchen* <br> Louder <br> Reduce volume of *Office* |
 | Start or stop the current playlist <br> :arrow_forward: / :stop_button: / :pause_button: | Play <br> Stop playing in the *Bedroom* <br> *Kitchen* pause |
-| Skip tracks in the playlist <br> :previous_track_button: / :next_track_button:  | Skip to previous song <br> Next <br> Restart on *Lounge* squeezebox <br> Play this track from the beginning |
+| Skip tracks in the playlist <br> :previous_track_button: / :arrow_right_hook: / :next_track_button:  | Skip to previous song <br> Next <br> Restart on *Lounge* squeezebox <br> Play this track from the beginning |
 | Load a new playlist <br> :radio: / :studio_microphone: / :woman_singer: / :cd: / :musical_note: | *Lounge* play playlist *Party Mix* <br> Play genre *Country* <br> Artist *Queen* on *Bedroom* player <br> On the *Lounge* squeezebox play songs by *Johnny Cash* <br> *Kitchen* play album *Money For Nothing* by *Dire Straits* <br> Song *Seven Nation Army* <br> Play *Kylie Minogue* on Bedroom |
 
 All commands apply to either a single Squeezebox player or a sync group. If the name of the player is omitted then the script attempts to make a sensible choice based on which players are switched on and whether they are currently playing anything. Only the power on/off commands require the player to be explicitly identified.
@@ -38,6 +38,7 @@ All commands apply to either a single Squeezebox player or a sync group. If the 
 ### Additional Shortcuts
 
 Interaction with Siri can be made more organic by creating additional Shortcuts for common interactions. These can have some or all of the command hard-coded, e.g.:
+* :speech_balloon: [Squeezebox Now Playing](https://www.icloud.com/shortcuts/688e30b6553049dcb2bcd852f511c02c)
 * :arrow_forward: [Squeezebox Play](https://www.icloud.com/shortcuts/37e5c92bc6d5473892b774251ed2bc8c)
 * :arrow_forward: [Squeezebox Play Playlist](https://www.icloud.com/shortcuts/78415ce7a5414c9e8a3f3647e9fc5aae) ‡
 * :arrow_forward: [Squeezebox Play Genre](https://www.icloud.com/shortcuts/329e56610acb4e109be77d0c3fe2c927) ‡
@@ -45,9 +46,14 @@ Interaction with Siri can be made more organic by creating additional Shortcuts 
 * :arrow_forward: [Squeezebox Play Album](https://www.icloud.com/shortcuts/24676022db5d425aab8c6c645f0f508d) ‡
 * :arrow_forward: [Squeezebox Play Song](https://www.icloud.com/shortcuts/a17d7f791e95475a92dffb1fd0a411ea) ‡
 * :stop_button: [Squeezebox Stop](https://www.icloud.com/shortcuts/4c529ad29eab4d1d90f7fcd4fec66f07)
+* :pause_button: [Squeezebox Pause](https://www.icloud.com/shortcuts/d57d08cbef8e496c9edaf3b1eea44bc3)
+* :previous_track_button: [Squeezebox Previous](https://www.icloud.com/shortcuts/842aa0d39d18414dbf618a70fde02514)
+* :arrow_right_hook: [Squeezebox Restart](https://www.icloud.com/shortcuts/359d2a485e954878a26bf023389258b6)
 * :next_track_button: [Squeezebox Next](https://www.icloud.com/shortcuts/763f97dc6c994877b5d56390de5f9e02)
 
 ‡ Use of these shortcuts also requires the *Squeezebox Play* shortcut to be installed.
+
+None of these shortcuts ask for the player to control, so they are really only suitable when there is a single active sync group.
 
 ## Notes
 
