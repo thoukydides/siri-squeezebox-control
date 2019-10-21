@@ -26,8 +26,11 @@ Response.prototype = new Error();
 let response = '';
 try {
     // Command to perform
-    let input = args.shortcutParameter
-                || await Dictation.start();
+    let input = args.shortcutParameter;
+    if (!input) {
+        if (config.runsWithSiri) throw new Response('Scriptable script ' + Script.name() + ' cannot be invoked directly from Siri. Instead of using the "Add to Siri" option within Scriptable, ensure that the "Allow Untrusted Shortcuts" option is enabled within the Shortcut app\'s settings, and then install a shortcut to Ask for input before invoking the script.');
+        input = await Dictation.start();
+    }
     console.log("Input '" + input + "'");
 
     // Obtain a list of players connected to the server
@@ -590,7 +593,8 @@ async function rpcPlayers() {
 async function rpcSyncGroups() {
     let result = await rpc('', 'syncgroups', '?');
     let groups = [];
-    result.syncgroups_loop.forEach(async group => {
+    let loop = result.syncgroups_loop || [];
+    loop.forEach(async group => {
         let members = group.sync_members.split(',').sort();
         //let memberNames = group.sync_member_names.split(',').sort();
         groups.push(members);
