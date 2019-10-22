@@ -185,6 +185,7 @@ try {
                          || players[0];
                 console.log("No player specified; defaulting to '" + player.name + "'");
             }
+            await getSyncGroup(player, players);
             
             // Replace query type aliases by their canonical names
             if ('querytype' in params) {
@@ -261,28 +262,25 @@ function textList(list, maxItems = 4, minItems) {
 
 // Obtain details of players currently connected to the server
 async function getConnectedPlayers() {
-    // Retrieve details of all known players and filter for those currently connected
-    let allPlayers = await rpcPlayers();
-    let players = {};
-    allPlayers.forEach(p => {
-        if (p.isplayer && p.connected) players[p.playerid] = p;
-    });
-    
-    // Retrieve and cross-reference details of sync groups
-    let syncgroups = await rpcSyncGroups();
-    syncgroups.forEach(group => {
-        let connected = group.filter(p => p in players);
-        connected.forEach(p => {
-            let others = connected.filter(o => o != p && players[o].power)
-                                  .map(o => players[o].name);
-            //players[p].groupname = textList([players[p].name, ...others]);
-            players[p].groupname = players[p].name + (others.length ? ' sync group' : '');
-        });
-    });
-    console.log(players);
+    let players = await rpcPlayers();
+    return players.filter(p => p.isplayer && p.connected);
+}
 
-    // Return details of the connected players
-    return Object.values(players);
+// Obtain full details of a single player
+async function getSyncGroup(player, players) {
+    let status = await rpcStatus(player);
+    Object.assign(player, status);
+    
+    // If the player is part of a sync group then construct a more descriptive name
+    player.groupname = player.name;
+    if (player.sync_master) {
+        let master = players.find(p => p.playerid == player.sync_master);
+        //let slaveIds = player.sync_slaves.split(',');
+        if (master) player.groupname = master.name + ' sync group';
+    }
+    
+    // Return the augmented details of this player
+    return player;
 }
 
 // Describe the current playlist entry (if any)
@@ -587,6 +585,12 @@ async function rpcPlayers() {
         players.push(...result.players_loop);
     } while (players.length < playersCount);
     return players;
+}
+
+// Query status of a single player (excluding playlist)
+async function rpcStatus(player) {
+    let result = await rpc(player, 'status');
+    return result;
 }
 
 // Query sync groups
