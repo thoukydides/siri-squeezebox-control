@@ -39,6 +39,7 @@ All commands apply to either a single Squeezebox player or a sync group. If the 
 
 Interaction with Siri can be made more organic by creating additional Shortcuts for common interactions. These can have some or all of the command hard-coded, e.g.:
 * :speech_balloon: [Squeezebox Now Playing](https://www.icloud.com/shortcuts/688e30b6553049dcb2bcd852f511c02c)
+* :loud_sound: [Squeezebox Volume](https://www.icloud.com/shortcuts/7009050abe304a8b81d05188c59b7eb7)
 * :arrow_forward: [Squeezebox Play](https://www.icloud.com/shortcuts/37e5c92bc6d5473892b774251ed2bc8c)
    * :arrow_forward: [Squeezebox Play Playlist](https://www.icloud.com/shortcuts/78415ce7a5414c9e8a3f3647e9fc5aae) ‡
    * :arrow_forward: [Squeezebox Play Genre](https://www.icloud.com/shortcuts/329e56610acb4e109be77d0c3fe2c927) ‡
